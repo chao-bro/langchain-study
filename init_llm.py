@@ -9,11 +9,27 @@ deepseek_v4_flash = init_chat_model(
     api_key=DEEPSEEK_API_KEY
 )
 
+deepseek_v4_flash_no_thinking = init_chat_model(
+    model='deepseek-v4-flash',
+    model_provider='deepseek',
+    base_url=DEEPSEEK_BASE_URL,
+    api_key=DEEPSEEK_API_KEY,
+    extra_body={"thinking": {"type": "disabled"}}
+)
+
 deepseek_v4_pro = init_chat_model(
     model='deepseek-v4-pro',
     model_provider='deepseek',
     base_url=DEEPSEEK_BASE_URL,
     api_key=DEEPSEEK_API_KEY
+)
+
+deepseek_v4_pro_no_thinking = init_chat_model(
+    model='deepseek-v4-pro',
+    model_provider='deepseek',
+    base_url=DEEPSEEK_BASE_URL,
+    api_key=DEEPSEEK_API_KEY,
+    extra_body={"thinking": {"type": "disabled"}}
 )
 
 qwen3_6_plus = init_chat_model(
