@@ -36,3 +36,10 @@ def get_weather(location: str):
         location: 需要查询天气的国家、城市或者地区，如新加坡，深圳，华北地区
     """
     return f"{location}当前的天气晴，有微风，3-4级，空气质量良好，无降雨概率，紫外线指数较高"
+
+@tool
+def get_location():
+    """
+    获取当前所在的地理位置
+    """
+    return f"当前位置为广东省深圳市"
